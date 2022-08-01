@@ -17,4 +17,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: data_manager_$CODEBUILD_BUILD_NUMBER.zip
+  name: api_server_$CODEBUILD_BUILD_NUMBER.zip
