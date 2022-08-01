@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "[INSTALL]"
+  pre_build:
+    commands:
+      - echo "[PREBUILD]"
+  build:
+    commands:
+      - echo "[BUILD]"
+  post_build:
+    commands:
+      - echo "[POST_BUILD]"
+
+artifacts:
+  files:
+    - '**/*'
+  name: data_manager_$CODEBUILD_BUILD_NUMBER.zip
