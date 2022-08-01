@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: Config/config.txt
+    destination: /webapps/Config
+  - source: source
+    destination: /webapps/myApp
+hooks:
+  ApplicationStart:
+    - location: start.sh
