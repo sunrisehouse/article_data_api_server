@@ -2,7 +2,7 @@
 echo "[App Stop]======================"
 PROJECT_NAME=lgcns_api_server
 echo "> 현재 구동중인 애플리케이션 pid 확인"
-CURRENT_PID=$(pgrep -fl $PROJECT_NAME | grep jar)
+CURRENT_PID=$(pgrep -fl $PROJECT_NAME | grep java)
 
 echo "> 현재 구동중인 애플리케이션 pid: $CURRENT_PID"
 if [ -z "$CURRENT_PID" ]; then
