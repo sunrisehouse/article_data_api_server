@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: Config/config.txt
-    destination: /webapps/Config
-  - source: source
-    destination: /webapps/myApp
+  - source: /
+    destination: /home/ec2-user/lgcns_api_server
 hooks:
+  ApplicationStop:
+    - location: scripts/stop.sh
   ApplicationStart:
-    - location: start.sh
+    - location: scripts/start.sh
