@@ -12,7 +12,7 @@ class HealthController {
     @GetMapping("/health")
     fun getHealth(): Flux<String> {
         log.debug("GET /health")
-        return Flux.just("Hello", "World");
+        return Flux.just("Hello World");
     }
 }
 
