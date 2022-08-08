@@ -32,5 +32,9 @@ source /etc/profile
 echo "[DEBUG] profile 적용됐나?"
 echo "[DEBUG] $PATH"
 echo "[DEBUG] $JAVA_HOME"
+
 echo "real start"
+cd $APP_HOME
 nohup java -jar $BUILD_OUTPUT_PATH > $APP_HOME/nohup.log &
+cat nohup.log
+cat logs/lgcns_api_server.log
