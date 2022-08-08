@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration>
 <configuration>
-    <property name="LOG_DIR" value="./logs"/>
+    <property name="LOG_DIR" value="logs"/>
     <property name="LOG_PREFIX" value="lgcns_api_server"/>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -18,7 +18,7 @@
         </rollingPolicy>
     </appender>
 
-    <root level="info">
+    <root level="trace">
         <appender-ref ref="FILE"/>
     </root>
 </configuration>
