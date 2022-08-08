@@ -11,5 +11,8 @@ sudo chown -R ec2-user:ec2-user $APP_HOME
 cd $APP_HOME
 
 echo "[Start Application]"
+echo "[DEBUG] $PATH"
+echo "[DEBUG] $JAVA_HOME"
+which java
 nohup java -jar build/libs/lgcns_api_server*.jar &
 
