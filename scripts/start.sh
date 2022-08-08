@@ -1,16 +1,25 @@
 #!/bin/bash
 echo "[Start Script]===================================="
-BUILD_DIR=build/libs
-BUILD_OUTPUT_NAME=lgcns_api_server-0.0.1.jar
+echo "[DEBUG]"
+pwd
+echo "[DEBUG]"
+cd ~
+pwd
+echo "[DEBUG]"
+ls -al
+echo "[DEBUG] Who Am I:"
+whoami
+
 APP_HOME=/home/ec2-user/lgcns_api_server
+BUILD_DIR_PATH=$APP_HOE/build/libs
+BUILD_OUTPUT_PATH=$BUILD_DIR_PATH/lgcns_api_server-0.0.1.jar
 
 echo "App Home: $APP_HOME"
-echo "Who Am I:"
-whoami
+echo "Build Output: $BUILD_OUTPUT_PATH"
 
 echo "[Start Application]"
 echo "[DEBUG] $PATH"
 echo "[DEBUG] $JAVA_HOME"
 which java
-chmod +x $BUILD_DIR/$BUILD_OUTPUT_NAME
-nohup java -jar $BUILD_DIR/$BUILD_OUTPUT_NAME &
+
+nohup java -jar $BUILD_OUTPUT_PATH &
