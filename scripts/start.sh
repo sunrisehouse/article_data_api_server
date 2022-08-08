@@ -11,7 +11,7 @@ echo "[DEBUG] Who Am I:"
 whoami
 
 APP_HOME=/home/ec2-user/lgcns_api_server
-BUILD_DIR_PATH=$APP_HOE/build/libs
+BUILD_DIR_PATH=$APP_HOME/build/libs
 BUILD_OUTPUT_PATH=$BUILD_DIR_PATH/lgcns_api_server-0.0.1.jar
 
 echo "App Home: $APP_HOME"
@@ -29,5 +29,8 @@ ls -al /opt
 echo "[DEBUG] profile 적용해보자"
 cd ~
 source /etc/profile
-
-nohup java -jar $BUILD_OUTPUT_PATH &
+echo "[DEBUG] profile 적용됐나?"
+echo "[DEBUG] $PATH"
+echo "[DEBUG] $JAVA_HOME"
+echo "real start"
+nohup java -jar $BUILD_OUTPUT_PATH > $APP_HOME/nohup.log &
