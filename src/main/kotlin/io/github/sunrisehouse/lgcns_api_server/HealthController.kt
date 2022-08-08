@@ -11,13 +11,7 @@ class HealthController {
     private val log = LoggerFactory.getLogger(this.javaClass)
     @GetMapping("/health")
     fun getHealth(): Flux<String> {
-        println("hihi1")
-        log.trace("trace message")
-        log.debug("debug message")
-        log.info("info  message")
-        log.warn("warn  message")
-        log.error("error message")
-        println("hihi2")
+        log.debug("GET /health")
         return Flux.just("Hello", "World");
     }
 }
