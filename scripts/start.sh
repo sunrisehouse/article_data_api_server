@@ -20,6 +20,14 @@ echo "Build Output: $BUILD_OUTPUT_PATH"
 echo "[Start Application]"
 echo "[DEBUG] $PATH"
 echo "[DEBUG] $JAVA_HOME"
+echo "[DEBUG]"
 which java
+echo "[DEBUG] profile 잘 있나"
+ls -al /etc/profile.d
+echo "[DEBUG] java 찾자"
+ls -al /opt
+echo "[DEBUG] profile 적용해보자"
+cd ~
+source /etc/profile
 
 nohup java -jar $BUILD_OUTPUT_PATH &
