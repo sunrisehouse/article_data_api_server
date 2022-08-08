@@ -1,18 +1,16 @@
 #!/bin/bash
 echo "[Start Script]===================================="
+BUILD_DIR=build/libs
+BUILD_OUTPUT_NAME=lgcns_api_server-0.0.1.jar
 APP_HOME=/home/ec2-user/lgcns_api_server
 
 echo "App Home: $APP_HOME"
 echo "Who Am I:"
 whoami
 
-echo "[Edit App Folder Permission]"
-sudo chown -R ec2-user:ec2-user $APP_HOME
-cd $APP_HOME
-
 echo "[Start Application]"
 echo "[DEBUG] $PATH"
 echo "[DEBUG] $JAVA_HOME"
 which java
-nohup java -jar build/libs/lgcns_api_server*.jar &
-
+chmod +x $BUILD_DIR/$BUILD_OUTPUT_NAME
+nohup java -jar $BUILD_DIR/$BUILD_OUTPUT_NAME &
