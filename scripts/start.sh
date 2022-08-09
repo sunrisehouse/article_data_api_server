@@ -10,5 +10,5 @@ echo "Build Output: $BUILD_OUTPUT_PATH"
 cd $APP_HOME
 pwd
 
-nohup java -jar $BUILD_OUTPUT_PATH > $APP_HOME/nohup.log &
+nohup java -jar $BUILD_OUTPUT_PATH > $APP_HOME/nohup.out 2>&1 &
 echo "[Start Script]========================================"
