@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "[App Stop]======================"
+echo "[App Stop]============================================="
 PROJECT_NAME=lgcns_api_server
 echo "> 현재 구동중인 애플리케이션 pid 확인"
 CURRENT_PID=$(pgrep -fl $PROJECT_NAME | grep java)
@@ -12,3 +12,4 @@ else
         kill -15 $CURRENT_PID
         sleep 5
 fi
+echo "[App Stop]=============================================="
