@@ -5,4 +5,3 @@ spring:
     url: r2dbc:mysql://DB_URL:DB_PORT/DB_NAME?useUnicode=true&characterEncoding=utf8
     username: DB_USERNAME
     password: DB_PASSWORD
-
