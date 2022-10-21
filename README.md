@@ -1,1 +1,1 @@
-# lgcns_api_server
+# article_data_api_server
